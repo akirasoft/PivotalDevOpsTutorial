@@ -168,7 +168,8 @@ jobs:
     params:
       monspecserviceenvironment: SampleJSonService/Production
       pipelinetaskname: ConcourseDeploy
-      deployversion: v1.5      
+      deployversion: v1.5  
+      APP-REPO: PivotalDevOpsTutorial    
   - put: PCF-Prod
     params:
       manifest: app-manifest-output/manifest.yml
