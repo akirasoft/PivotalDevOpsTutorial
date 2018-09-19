@@ -51,11 +51,6 @@ jobs:
     file: PivotalDevOpsTutorial/ci/tasks/app-manifest-prep.yml
     params:
       PCF_APP_SUFFIX: {{pcf-stage-app-suffix}}        
-  - put: dynatrace
-    params:
-      monspecserviceenvironment: SampleJSonService/Staging
-      pipelinetaskname: ConcourseDeploy
-      deployversion: v1.5
   - put: PCF-Stage
     params:
       manifest: app-manifest-output/manifest.yml
